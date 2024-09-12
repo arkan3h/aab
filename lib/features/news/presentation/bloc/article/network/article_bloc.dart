@@ -21,6 +21,7 @@ class NetworkArticleBloc extends Bloc<NetworkArticleEvent, NetworkArticleState> 
     }
 
     if (dataState is DataError) {
+      print(dataState.error!.message);
       emit(
         NetworkArticleError(dataState.error!)
       );
