@@ -1,5 +1,6 @@
 import 'package:aab/features/news/presentation/bloc/article/network/article_bloc.dart';
 import 'package:aab/features/news/presentation/bloc/article/network/article_state.dart';
+import 'package:aab/features/news/presentation/widget/article_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,8 +43,8 @@ class DailyNews extends StatelessWidget {
         if (state is NetworkArticleSuccess) {
           return ListView.builder(
             itemBuilder: (context, index) {
-              return ListTile(
-                title: Text('$index'),
+              return ArticleWidget(
+                article: state.articles![index],
               );
             },
             itemCount: state.articles!.length,

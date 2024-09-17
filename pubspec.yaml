@@ -30,6 +30,7 @@ dependencies:
 
   #make request to api
   retrofit: ^4.4.0
+  http: ^1.2.2
 
   #Hooks
   flutter_hooks: ^0.20.5
